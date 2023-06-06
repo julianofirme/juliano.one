@@ -25,7 +25,13 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
         },
       });
 
-      setRepos(res.data);
+      const sortedRepos = res.data.sort((a: Repository, b: Repository) => {
+        return (
+          new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+        );
+      });
+
+      setRepos(sortedRepos);
     } catch (error) {
       console.error(error);
     } finally {
@@ -41,7 +47,7 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
   return (
     <div className="flex justify-center">
       {isLoading ? (
-        <Loader2  className="mr-2 h-20 w-20 animate-spin text-zinc-200"/>
+        <Loader2 className="mr-2 h-20 w-20 animate-spin text-zinc-200" />
       ) : (
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <div className="grid grid-cols-1 gap-4">
