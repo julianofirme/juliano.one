@@ -14,7 +14,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg duration-500 text-zinc-500 hover:text-zinc-300"
+              className="text-lg duration-500 text-zinc-400 hover:text-zinc-300"
             >
               {item.name}
             </Link>
@@ -23,11 +23,11 @@ export default function Home() {
       </nav>
 
       <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        juliano firme
+        juliano firme.
       </h1>
 
       <div className="my-12 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
+        <h2 className="text-md text-zinc-400 ">
           Hi, my name is Juliano, Im building things for web.
         </h2>
       </div>

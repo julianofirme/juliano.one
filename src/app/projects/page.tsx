@@ -1,24 +1,8 @@
 import { FunctionComponent } from "react";
-import { Card } from "../components/card";
-import { Article } from "../components/article";
 import { Navigation } from "../components/nav";
+import Projects from "../components/projects";
 
 interface pageProps {}
-
-const projects: Project[] = [
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-  { name: "Crud", description: "Example CRUD", updated_at: new Date(), url: 'https://github.com/'},
-]
 
 const page: FunctionComponent<pageProps> = () => {
   return (
@@ -33,35 +17,7 @@ const page: FunctionComponent<pageProps> = () => {
         </div>
         <div className="w-full h-px bg-zinc-800" />
 
-        <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-					<div className="grid grid-cols-1 gap-4">
-						{projects
-							.filter((_, i) => i % 3 === 0)
-							.map((project) => (
-								<Card key={project.url}>
-									<Article project={project} views={0} />
-								</Card>
-							))}
-					</div>
-					<div className="grid grid-cols-1 gap-4">
-						{projects
-							.filter((_, i) => i % 3 === 1)
-							.map((project) => (
-								<Card key={project.url}>
-									<Article project={project} views={0} />
-								</Card>
-							))}
-					</div>
-					<div className="grid grid-cols-1 gap-4">
-						{projects
-							.filter((_, i) => i % 3 === 2)
-							.map((project) => (
-								<Card key={project.url}>
-									<Article project={project} views={0} />
-								</Card>
-							))}
-					</div>
-				</div>
+        <Projects />
       </div>
     </div>
   );
