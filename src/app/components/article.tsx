@@ -7,7 +7,7 @@ type Props = {
 
 export const Article: React.FC<Props> = ({ project, views }) => {
 	return (
-		<Link href={`${project.url}`}>
+		<Link target="_blank" href={`${project.url}`}>
 			<article className="p-4 md:p-8">
 				<div className="flex justify-between gap-2 items-center">
 					<span className="-mt-4 mb-4 text-xs duration-1000 text-zinc-400 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
