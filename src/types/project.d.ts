@@ -28,4 +28,5 @@ interface Repository {
   owner: Owner;
   html_url: string;
   description: string | null;
+  updated_at: Date
 }
