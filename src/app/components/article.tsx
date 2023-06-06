@@ -10,7 +10,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 		<Link target="_blank" href={`${project.html_url}`}>
 			<article className="p-4 md:p-8">
 				<div className="flex justify-between gap-2 items-center">
-					<span className="-mt-4 mb-4 text-xs duration-1000 text-zinc-400 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
+					<span className="md:-mt-4 mb-4 text-xs duration-1000 text-zinc-400 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
 							<time dateTime={new Date(project.updated_at).toISOString()}>
 								{Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
 									new Date(project.updated_at),
